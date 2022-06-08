@@ -1,0 +1,66 @@
+<script src="./angular-countries/dist/js/ngCountries.js"></script>
+
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+    <div class="mb-3 font-bold text-2xl">
+        <span class="text-900">Customer informations</span>
+    </div>
+    <div class="text-700 text-sm mb-5">Ac turpis egestas maecenas pharetra convallis posuere morbi leo urna.</div>
+    <div class="mb-4">
+        <span class="p-float-label">
+            <input id="float-input-name" type="text" pInputText [(ngModel)]="client.name"> 
+            <label for="float-input-name">Name</label>
+        </span>
+    </div>
+    <div class="mb-4">
+    <span class="p-float-label">
+        <input id="float-input-surname" type="text" pInputText [(ngModel)]="client.surname"> 
+        <label for="float-input-surname">Surname</label>
+    </span>
+    </div>
+    <div class="mb-4">
+    <span class="p-float-label">
+        <input id="float-input-address" type="text" pInputText [(ngModel)]="client.address"> 
+        <label for="float-input-address">Address</label>
+    </span>
+    </div>
+    <div class="mb-4">
+    <span class="p-float-label">
+        <input id="float-input-postCode" type="text" pInputText [(ngModel)]="client.postCode"> 
+        <label for="float-input-postCode">Post Code</label>
+    </span>
+    </div>
+    <div class="mb-4">
+    <span class="p-float-label">
+        <input id="float-input-city" type="text" pInputText [(ngModel)]="client.city"> 
+        <label for="float-input-city">City</label>
+    </span>
+    </div>
+    <div class="mb-4">
+    <span class="p-float-label">
+        <input id="float-input-country" type="text" pInputText [(ngModel)]="client.country"> 
+        <label for="float-input-country">Country</label>
+    </span>
+    </div>
+    <!--
+    <input type="text" list="countrylist" class="form-control" ng-model="userDoc.country">
+    <ngcountries></ngcountries>-->
+    <div class="mb-4">
+    <span class="p-float-label">
+        <input id="float-input-phone" type="text" pInputText [(ngModel)]="client.phone"> 
+        <label for="float-input-phone">Phone</label>
+    </span>
+    </div>
+    <div class="mb-4">
+    <span class="p-float-label">
+        <input id="float-input-email" type="text" pInputText  [(ngModel)]="client.email"> 
+        <label for="float-input-email">Mail</label>
+    </span>
+    </div>
+
+<p-button label="Back" icon="pi" (click)="listClients()"></p-button>
+&nbsp;
+<p-button *ngIf="createMode" label="Create" icon="pi" (click)="createClient()"></p-button>
+<p-button *ngIf="!createMode" label="Update" icon="pi" (click)="updateClient()"></p-button>
+
+
+</div>
